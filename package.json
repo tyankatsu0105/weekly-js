@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/tyankatsu0105/weekly-js#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.7"
+    "browser-sync": "^2.26.7",
+    "netlify-cli": "^2.37.0"
   }
 }

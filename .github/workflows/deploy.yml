@@ -1,0 +1,44 @@
+name: Deploy to Netlify
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      TZ: 'Asia/Tokyo'
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/cache@v1
+        id: cache
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-npm-
+      - name: Read .tool-versions
+        uses: marocchino/tool-versions-action@v1
+        id: asdf
+
+      - name: Use Node.js ${{ steps.asdf.outputs.nodejs }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ steps.asdf.outputs.nodejs }}
+
+      - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm ci
+
+      - name: Build json
+        run: npm run build
+
+      - name: Deploy
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_PUBLISH_KEY: ${{ secrets.NETLIFY_PUBLISH_KEY }}
+        run: npx netlify deploy -s $NETLIFY_SITE_ID -a $NETLIFY_PUBLISH_KEY -p --dir ./src
