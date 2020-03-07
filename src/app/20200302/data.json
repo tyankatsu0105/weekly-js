@@ -1,0 +1,29 @@
+{
+  "data": [
+    {
+      "name": "キャベツ",
+      "stockQuantity": 20,
+      "price": 100
+    },
+    {
+      "name": "ニンジン",
+      "stockQuantity": 40,
+      "price": 90
+    },
+    {
+      "name": "タマネギ",
+      "stockQuantity": 18,
+      "price": 180
+    },
+    {
+      "name": "白菜",
+      "stockQuantity": 30,
+      "price": 190
+    },
+    {
+      "name": "<img onerror='window.document.body.innerHTML = \"<h1>XSS</h1>\";' src=''>",
+      "stockQuantity": 30,
+      "price": 190
+    }
+  ]
+}

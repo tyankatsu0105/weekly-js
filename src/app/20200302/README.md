@@ -1,0 +1,8 @@
+# 20200302
+
+jsonからdataをfetchし、その結果を使ってtableを作成した。
+dataの中にXSSを引き起こす文字列が混入しているが、escapeする関数を用意し、それを使うことで回避した。
+なお、text以外にはreplace関数は使いたくないので、関数の引数のがstring型意外であればそのまま返すようにした。
+DOM生成するAPI（createElementとか）を使っても良かったが、例えばforinで回してしまうと、numberのときにtoLocaleString使いたい場合の判定が面倒だったり、tdをdataの要素各々分createElementしないといけなかったりで手間がかかりそうだったので、文字列テンプレートで、全てescapeさせるようにした。
+
+fetch関数はpromiseを返し、データを確実に取得したい場合は、jsonメソッドを使ってpromiseを返してもらえれば完全なjson文字列が取得可能になる。
