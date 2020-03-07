@@ -40,5 +40,7 @@ jobs:
       - name: Deploy
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          NETLIFY_PUBLISH_KEY: ${{ secrets.NETLIFY_PUBLISH_KEY }}
-        run: npx netlify deploy -s $NETLIFY_SITE_ID -a $NETLIFY_PUBLISH_KEY -p --dir ./src
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_PUBLISH_KEY }}
+        uses: netlify/actions/cli@master
+        with:
+          args: deploy --dir=src
