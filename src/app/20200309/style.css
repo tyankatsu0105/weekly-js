@@ -1,0 +1,65 @@
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select,textarea{margin:0}html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}td:not([align]),th:not([align]){text-align:left}
+button,input,label,select,textarea{margin:0;border:0;padding:0;display:inline-block;vertical-align:middle;white-space:normal;background:0 0;line-height:1;font-size:13px;font-family:Arial}input,textarea{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}button,input[type=button],input[type=checkbox],input[type=radio],input[type=reset],input[type=submit],select{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}input[type=checkbox],input[type=radio]{width:13px;height:13px}input[type=search]{-webkit-appearance:textfield;-webkit-box-sizing:content-box}::-webkit-search-decoration{display:none}button,input[type=button],input[type=reset],input[type=submit]{overflow:visible;width:auto}::-webkit-file-upload-button{padding:0;border:0;background:0 0}textarea{vertical-align:top;overflow:auto}select[multiple]{vertical-align:top}
+body {
+  background-color: rgb(177, 177, 177);
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+
+.form {
+  margin-bottom: 100px;
+}
+
+.form__heading {
+  font-size: 6rem;
+  color: rgb(145, 145, 145);
+  text-align: center;
+  letter-spacing: 0.5em;
+  margin-right: -0.5em;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+.form__item-box {
+  display: flex;
+  justify-content: center;
+}
+.form__item {
+  font-size: 3rem;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 0 19px 5px rgb(131, 131, 131);
+  width: 100%;
+}
+.form__submit {
+  margin-left: 10px;
+  font-size: 3rem;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 0 19px 5px rgb(131, 131, 131);
+  cursor: pointer;
+}
+
+.list {}
+.list__item {
+  border-radius: 4px;
+  box-shadow: 0 0 19px 5px rgb(131, 131, 131);
+  position: relative;
+  min-height: 100px;
+  margin-bottom: 30px;
+}
+.list__item--close {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.list__item--text {
+  padding: 15px;
+  padding-top: 2rem;
+  font-size: 3rem;
+  word-break: break-all;
+}
