@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "browser-sync start --server src --serveStatic src --files src",
     "build": "node scripts/createJson.js",
-    "gen": "hygen generator app"
+    "gen": "hygen generator app",
+    "create-json": "node scripts/createJson.js"
   },
   "repository": {
     "type": "git",
