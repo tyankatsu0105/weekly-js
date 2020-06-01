@@ -1,0 +1,39 @@
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select,textarea{margin:0}html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}td:not([align]),th:not([align]){text-align:left}
+button,input,label,select,textarea{margin:0;border:0;padding:0;display:inline-block;vertical-align:middle;white-space:normal;background:0 0;line-height:1;font-size:13px;font-family:Arial}input,textarea{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}button,input[type=button],input[type=checkbox],input[type=radio],input[type=reset],input[type=submit],select{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}input[type=checkbox],input[type=radio]{width:13px;height:13px}input[type=search]{-webkit-appearance:textfield;-webkit-box-sizing:content-box}::-webkit-search-decoration{display:none}button,input[type=button],input[type=reset],input[type=submit]{overflow:visible;width:auto}::-webkit-file-upload-button{padding:0;border:0;background:0 0}textarea{vertical-align:top;overflow:auto}select[multiple]{vertical-align:top}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(33, 33, 33);
+  color: #fff;
+}
+
+.heading {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 900;
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 2rem;
+}
+.result-Item {}
+
+.result-Item_Inner {
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+.button {
+  margin-top: 60px;
+  background-color: rgb(144, 202, 249);
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.4rem;
+}
