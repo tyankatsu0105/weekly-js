@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "browser-sync start --server src --serveStatic src --files src",
-    "build": "node scripts/createJson.js",
-    "gen": "hygen generator app",
+    "gen": "run-s _gen create-json",
+    "_gen": "hygen generator app",
     "create-json": "node scripts/createJson.js"
   },
   "repository": {
@@ -21,7 +21,9 @@
   },
   "homepage": "https://github.com/tyankatsu0105/weekly-js#readme",
   "devDependencies": {
+    "@types/node": "^16.0.0",
     "browser-sync": "^2.26.7",
-    "hygen": "^5.0.3"
+    "hygen": "^5.0.3",
+    "npm-run-all": "^4.1.5"
   }
 }

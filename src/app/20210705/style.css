@@ -1,0 +1,64 @@
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select,textarea{margin:0}html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}td:not([align]),th:not([align]){text-align:left}
+button,input,label,select,textarea{margin:0;border:0;padding:0;display:inline-block;vertical-align:middle;white-space:normal;background:0 0;line-height:1;font-size:13px;font-family:Arial}input,textarea{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}button,input[type=button],input[type=checkbox],input[type=radio],input[type=reset],input[type=submit],select{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}input[type=checkbox],input[type=radio]{width:13px;height:13px}input[type=search]{-webkit-appearance:textfield;-webkit-box-sizing:content-box}::-webkit-search-decoration{display:none}button,input[type=button],input[type=reset],input[type=submit]{overflow:visible;width:auto}::-webkit-file-upload-button{padding:0;border:0;background:0 0}textarea{vertical-align:top;overflow:auto}select[multiple]{vertical-align:top}
+
+#container{
+  width: 100vw;
+  height: 100vh;
+}
+
+#canvas {
+  cursor: url("pencil.png") 0 40, pointer;
+}
+
+button {
+  width: 100%;
+  height: 100%;
+  font-size: inherit;
+  font-weight: inherit;
+  text-shadow: inherit;
+}
+button:hover {
+  cursor: pointer;
+}
+input:hover {
+  cursor: pointer;
+}
+
+.controller-list {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+}
+
+.controller-list__item {
+  width: 70px;
+  height: 70px;
+  border: 1px solid #000;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 1px 0 0 #fff, 0 1px 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+}
+
+.controller-list__item + .controller-list__item{
+  border-top: 0;
+}
+
+.controller-list__item-input--color {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.controller-list__item-color {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
