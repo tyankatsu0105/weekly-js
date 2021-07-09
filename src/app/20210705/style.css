@@ -7,7 +7,13 @@ button,input,label,select,textarea{margin:0;border:0;padding:0;display:inline-bl
 }
 
 #canvas {
+  cursor: not-allowed;
+}
+#canvas.is-active {
   cursor: url("pencil.png") 0 40, pointer;
+}
+#pen-back.is-active {
+  background-color: rgb(87, 253, 87);
 }
 
 button {
@@ -22,6 +28,10 @@ button:hover {
 }
 input:hover {
   cursor: pointer;
+}
+input[type=checkbox] {
+  width: inherit;
+  height: inherit;
 }
 
 .controller-list {
@@ -45,8 +55,7 @@ input:hover {
 .controller-list__item + .controller-list__item{
   border-top: 0;
 }
-
-.controller-list__item-input--color {
+.controller-list__item-input {
   position: absolute;
   left: 0;
   top: 0;
@@ -54,6 +63,15 @@ input:hover {
   height: 100%;
   opacity: 0;
 }
+
+.controller-list__item-pen {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .controller-list__item-color {
   position: relative;

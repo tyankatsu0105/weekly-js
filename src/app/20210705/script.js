@@ -3,9 +3,15 @@
 // =====================================
 
 const container = document.getElementById('container')
+
+/**
+ * @type {HTMLCanvasElement}
+ */
 const canvas = document.getElementById('canvas')
+
 const pen = document.getElementById('pen')
-const bold = document.getElementById('bold')
+const penBack = document.getElementById('pen-back')
+
 const color = document.getElementById('color')
 const colorBack = document.getElementById('color-back')
 
@@ -45,11 +51,41 @@ const init = () => {
 init()
 
 // =====================================
+// pen
+// =====================================
+
+let isReadyPaint = false
+
+/**
+ * @param {Event} event 
+ */
+const togglePenReadyStatus = (event) => {
+  isReadyPaint = event.target.checked
+}
+
+/**
+ * @param {Event} event 
+ */
+const handleChangePen = (event) => {
+  togglePenReadyStatus(event)
+  const activeClass = 'is-active'
+
+  if (event.target.checked) {
+    canvas.classList.add(activeClass)
+    penBack.classList.add(activeClass)
+  } else {
+    canvas.classList.remove(activeClass)
+    penBack.classList.remove(activeClass)
+  }
+}
+
+pen.onchange = handleChangePen
+
+// =====================================
 // color
 // =====================================
 
 /**
- * 
  * @param {Event} event 
  */
 const changeColor = (event) => {
@@ -57,8 +93,6 @@ const changeColor = (event) => {
 }
 
 color.onchange = changeColor
-
-
 
 // =====================================
 // mouseDown
@@ -94,7 +128,7 @@ let lastY = undefined
  * @param {MouseEvent} event 
  */
 const paint = (event) => {
-  if(!isPainting) return 
+  if(!isReadyPaint || !isPainting) return 
 
   const x = event.pageX
   const y = event.pageY
