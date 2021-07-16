@@ -17,11 +17,19 @@ button,input,label,select,textarea{margin:0;border:0;padding:0;display:inline-bl
   cursor: pointer;
 }
 
+.wrapper {
+  padding: 12px;
+  border: 1px dotted rgb(117, 188, 255);
+  border-radius: 3px;
+  cursor: move;
+}
+
 .element {
   padding: 12px;
-  width: 100px;
-  height: 70px;
+  width: 100%;
+  height: 100%;
   border: 2px solid rgb(117, 188, 255);
   font-size: 1.2rem;
   border-radius: 6px;
+  box-sizing: border-box;
 }
